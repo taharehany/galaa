@@ -48,6 +48,44 @@
         </nav>
       </header>
       <!--header part-->
+      <div class="modals">
+        <!--success modal-->
+        <div class="modal success-modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="icon"><i class="fa-solid fa-check"></i></div>
+                <div class="text">
+                  <h5 class="modal-title" id="successModalLabel">success</h5>
+                  <p>thank your for your subscription</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--success modal-->
+        <!--failed modal-->
+        <div class="modal failed-modal fade" id="failedModal" tabindex="-1" aria-labelledby="failedModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="icon"><i class="fa-solid fa-xmark"></i></div>
+                <div class="text">
+                  <h5 class="modal-title" id="failedModalLabel">failed</h5>
+                  <p>example of error message</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--failed modal-->
+      </div>
       <!--hero-->
       <section class="hero" style="background-image: url(./images/hero2.jpg)">
         <div class="container">
@@ -441,5 +479,10 @@
     <!--scripts-->
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      window.onload = () => {
+      	$('.success-modal').modal('show');
+      }
+    </script>
   </body>
 </html>
